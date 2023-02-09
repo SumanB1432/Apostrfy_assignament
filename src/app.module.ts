@@ -6,7 +6,9 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 import { AuthModule } from './auth/auth.module';
 import { ChatGetWay } from './chat.gateway';
+import { GetWayModule } from './getway/getway.module';
 import { UserModule } from './user/user.module';
+
 
 @Module({
   imports: [
@@ -21,7 +23,8 @@ import { UserModule } from './user/user.module';
       inject :[ConfigService]
     }),
     UserModule,
-    AuthModule
+    AuthModule,
+    GetWayModule,
   ],
   controllers: [],
   providers: [ChatGetWay],
