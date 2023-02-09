@@ -3,7 +3,7 @@ import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { User } from 'src/user/schema/user';
-import * as bcrypt from "bcryptjs"
+import * as bcryptjs from "bcryptjs"
 import { JwtService } from '@nestjs/jwt/dist';
 import { LogInDto } from './dto/logIn.dto';
 
@@ -16,7 +16,7 @@ export class AuthService {
     ){}
     async singUp(singUpDto):Promise<{token:string}>{
         const {name,phone_no,gmail,password,city} = singUpDto
-        const hashedPassword = await bcrypt.hash(password,10)
+        const hashedPassword = await bcryptjs.hash(password,10)
 
         const user = await this.userModel.create({
             name,
@@ -35,7 +35,7 @@ export class AuthService {
         if(!user){
             throw new UnauthorizedException('Invalid gmail or password')
         }
-        const isPassWordMatched = await bcrypt.compare(password,user.password)
+        const isPassWordMatched = await bcryptjs.compare(password,user.password)
         // console.log(isPassWordMatched)
         if(!isPassWordMatched){
             throw new UnauthorizedException('Invalid gmail or password')

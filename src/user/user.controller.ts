@@ -1,9 +1,8 @@
 /* eslint-disable prettier/prettier */
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Head } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { SignUpDto } from 'src/auth/dto/signUp.dto';
 import { AuthService } from 'src/auth/auth.service';
 
 @Controller('user')
@@ -21,12 +20,12 @@ export class UserController {
   
   // }
 
-  @Get()
+  @Post('/getAll')
   findAll() {
     return this.userService.findAll();
   }
 
-  @Get(':id')
+  @Post(':id')
   findOne(@Param('id') id: string) {
     return this.userService.findOne(id);
   }
