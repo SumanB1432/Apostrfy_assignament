@@ -26,6 +26,6 @@ import { UserModule } from './user/user.module';
     GetWayModule,
   ],
   controllers: [],
-  providers: [ChatGetWay],
+  providers: [],
 })
 export class AppModule {}
