@@ -31,6 +31,8 @@
     "@nestjs/platform-socket.io": "^9.3.7",
     "@nestjs/websockets": "^9.3.7",
     "@types/socket.io": "^3.0.2",
+    "@vendia/serverless-express": "^4.10.1",
+    "aws-lambda": "^1.0.7",
     "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
     "class-validator": "^0.14.0",
