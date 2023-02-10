@@ -74,7 +74,7 @@
     "MainLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/curd-auth-prod-main"
+        "LogGroupName": "/aws/lambda/my-first-nestApp-prod-main"
       }
     },
     "IamRoleLambdaExecution": {
@@ -102,7 +102,7 @@
               "Fn::Join": [
                 "-",
                 [
-                  "curd-auth",
+                  "my-first-nestApp",
                   "prod",
                   "lambda"
                 ]
@@ -119,7 +119,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/curd-auth-prod*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/my-first-nestApp-prod*:*"
                     }
                   ]
                 },
@@ -130,7 +130,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/curd-auth-prod*:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/my-first-nestApp-prod*:*:*"
                     }
                   ]
                 }
@@ -143,7 +143,7 @@
           "Fn::Join": [
             "-",
             [
-              "curd-auth",
+              "my-first-nestApp",
               "prod",
               {
                 "Ref": "AWS::Region"
@@ -161,11 +161,11 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/curd-auth/prod/1675961086979-2023-02-09T16:44:46.979Z/curd-auth.zip"
+          "S3Key": "serverless/my-first-nestApp/prod/1676007565502-2023-02-10T05:39:25.502Z/my-first-nestApp.zip"
         },
         "Handler": "dist/serverless.handler",
         "Runtime": "nodejs12.x",
-        "FunctionName": "curd-auth-prod-main",
+        "FunctionName": "my-first-nestApp-prod-main",
         "MemorySize": 1024,
         "Timeout": 6,
         "Environment": {
@@ -191,20 +191,20 @@
         "MainLogGroup"
       ]
     },
-    "MainLambdaVersionu9VKQxKitt18sUe7NDf4xMANOgYd6YkNnVaYhb6vNMU": {
+    "MainLambdaVersionZFJrA6tbC69CCbc0t6nXKN7RDhDcLqOU7Q8I5ynfE": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "MainLambdaFunction"
         },
-        "CodeSha256": "XrIs0EywmCORmH7jSDCUrQqVw3o7VbkUfNP1GJgjcek="
+        "CodeSha256": "GxMerwZduk3Z8hbv7IbXt08uz+rG290innhZ3FSEO9Y="
       }
     },
     "ApiGatewayRestApi": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
-        "Name": "prod-curd-auth",
+        "Name": "prod-my-first-nestApp",
         "EndpointConfiguration": {
           "Types": [
             "EDGE"
@@ -323,7 +323,7 @@
         "MainLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1675960990586": {
+    "ApiGatewayDeployment1676007561246": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -380,16 +380,16 @@
         "Ref": "ServerlessDeploymentBucket"
       },
       "Export": {
-        "Name": "sls-curd-auth-prod-ServerlessDeploymentBucketName"
+        "Name": "sls-my-first-nestApp-prod-ServerlessDeploymentBucketName"
       }
     },
     "MainLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "MainLambdaVersionu9VKQxKitt18sUe7NDf4xMANOgYd6YkNnVaYhb6vNMU"
+        "Ref": "MainLambdaVersionZFJrA6tbC69CCbc0t6nXKN7RDhDcLqOU7Q8I5ynfE"
       },
       "Export": {
-        "Name": "sls-curd-auth-prod-MainLambdaFunctionQualifiedArn"
+        "Name": "sls-my-first-nestApp-prod-MainLambdaFunctionQualifiedArn"
       }
     },
     "ServiceEndpoint": {
@@ -415,7 +415,7 @@
         ]
       },
       "Export": {
-        "Name": "sls-curd-auth-prod-ServiceEndpoint"
+        "Name": "sls-my-first-nestApp-prod-ServiceEndpoint"
       }
     }
   }

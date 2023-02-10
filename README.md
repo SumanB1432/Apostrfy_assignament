@@ -11,6 +11,9 @@
 # signup : `localhost:3000/auth/signup`
 # login : `localhost:3000/auth/login`
 
-** SOCKET.IO GATEWAY AND CURD OPERATION API COLLECTION MAKE IN POSTMAN COLLECTION 
+# SOCKET.IO GATEWAY AND CURD OPERATION API COLLECTION MAKE IN POSTMAN COLLECTION 
+
+# I USE SERVERLESS AWS FOR DEPLOY MY APP(I USE MY OWN AWS CREDENTIALS) , IT IS DONE SUCCESSFULLY BUT THE DEPLOY LINK DOSE NOT WORK ,IT THROUGH INTERNAL SERVER ERROR.
+# DEPLOY LINK :`https://6tgyv9citc.execute-api.us-east-1.amazonaws.com/prod/` & `https://6tgyv9citc.execute-api.us-east-1.amazonaws.com/prod/%7Bproxy+%7D`
 
 

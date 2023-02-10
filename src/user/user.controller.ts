@@ -20,12 +20,12 @@ export class UserController {
   
   // }
 
-  @Post('/getAll')
+  @Get('')
   findAll() {
     return this.userService.findAll();
   }
 
-  @Post(':id')
+  @Get(':id')
   findOne(@Param('id') id: string) {
     return this.userService.findOne(id);
   }
