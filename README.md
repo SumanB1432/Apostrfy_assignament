@@ -1,3 +1,4 @@
+# TO INSTALL PACKAGE : `npm i`
 # start_command : `npm run start`
 # start application in watch mode: `npm run start:dev`
 
