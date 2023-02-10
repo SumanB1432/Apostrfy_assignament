@@ -14,6 +14,8 @@
 # SOCKET.IO GATEWAY AND CURD OPERATION API COLLECTION MAKE IN POSTMAN COLLECTION 
 
 # I USE SERVERLESS AWS FOR DEPLOY MY APP(I USE MY OWN AWS CREDENTIALS) , IT IS DONE SUCCESSFULLY BUT THE DEPLOY LINK DOSE NOT WORK ,IT THROUGH INTERNAL SERVER ERROR.
-# DEPLOY LINK :`https://6tgyv9citc.execute-api.us-east-1.amazonaws.com/prod/` & `https://6tgyv9citc.execute-api.us-east-1.amazonaws.com/prod/%7Bproxy+%7D`
+# DEPLOY LINK :`https://6tgyv9citc.execute-api.us-east-1.amazonaws.com/prod/`
+                 `or`
+ `https://6tgyv9citc.execute-api.us-east-1.amazonaws.com/prod/%7Bproxy+%7D`
 
 
